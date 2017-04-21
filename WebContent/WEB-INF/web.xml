@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>jsp_servlet_servlet</display-name>
+
+	<context-param>
+		<param-name>driverClass</param-name>
+		<param-value>mysql.com.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>pass4mysql</param-value>
+	</context-param>
+
+	<servlet>
+		<description></description>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.atguigu.servlet.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/helloServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>hello.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
